@@ -4,7 +4,8 @@
 ### What is an API
 
 ### Components of an API
-1. Repo — basically wrappers around any 3rd party library (data stores, mailing service, push notification services, etc…). You might have one per entity type, but it’s not required.
+0. Service - basically wrappers around any 3rd party library (data stores, mailing service, push notification services, etc…). 
+1. Repo —  abstractions around a single resource type. Uses various services to perform operations on resources.
 2. Controller — sits between the repo (and optionally the service layer) and the router. Extracts information from requests and uses the repo/service layer to formulate responses.
 3. Router — The router is the Interface in API. It specifies the routes that your application client should hit.
 4. Application — listens on a port for requests then forwards them to the router.
